@@ -1,3 +1,0 @@
-class adsf {
-	asd: string;
-}

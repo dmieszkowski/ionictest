@@ -1,0 +1,32 @@
+<ion-card>
+  <ion-card-content>
+      <ion-slides pager>
+          <ion-slide *ngFor="let img of item.Images">
+              <img src="{{img}}" style="width: auto; height:125px; margin: auto;"/>
+          </ion-slide>
+        </ion-slides>    <ion-card-title>
+      Nine Inch Nails Live
+    </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+    </p>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>Like</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="onFulviewClick()">
+          <div>Full view</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>

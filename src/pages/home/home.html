@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <img src="../../assets/imgs/logo_bar.png" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;"
+      />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="onSearchChange($event)"></ion-searchbar>
+
+  <ion-list>
+    <ion-item menuClose *ngFor="let p of pages" (click)="onPageClick(p)">
+      <ion-icon name="{{p.ico}}" item-start></ion-icon>
+      {{p.title}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

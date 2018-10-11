@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Preferences
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Price min</ion-label>
+      <ion-input type="number" ([ngModel])="preferences.priceMin"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Price max</ion-label>
+      <ion-input type="number" [ngModel]="preferences.priceMax"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Year min</ion-label>
+      <ion-input type="number" [ngModel]="preferences.YearMin"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Year max</ion-label>
+      <ion-input type="number" [ngModel]="preferences.YearMax"></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
